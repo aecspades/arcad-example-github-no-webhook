@@ -1,0 +1,14 @@
+{
+  "includePath": [
+    "QPROTOSRC"
+  ],
+  "repository": "git@github.com:aecspades/arcad-example-github-no-webhook.git",
+  "extensions": {
+    "arcad": {
+      "code": "AXGHNOHOOK"
+    }
+  },
+  "objlib": "&verlibaxghnohook",
+  "buildCommand": "elias compile {branch}",
+  "compileCommand": "elias compile {branch} -f {filename}"
+}
