@@ -1,11 +1,12 @@
-      *%METADATA                                                                          *
-      * %TEXT                                                                             *
-      *%EMETADATA                                                                         *
-     forder1    if   e           k disk
-     d next            s              6s 0 DTAARA('LASTORDNO')
-     c     *hival        setgt     order1
-     c                   readp     order1
-     c     *lock         in        next
-     c                   z-add     orid          next
-     c                   out       next
-     c                   seton                                        lr
+**FREE
+//%METADATA                                                                          *
+// %TEXT                                                                             *
+//%EMETADATA                                                                         *
+Dcl-F order1     Keyed;
+Dcl-S next            Zoned(6:0)      DtaAra('LASTORDNO');
+Setgt *hival order1;
+ReadP order1;
+In *lock next;
+Eval next = orid;
+Out next;
+*INLR = '1';
